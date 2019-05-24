@@ -14,7 +14,7 @@ def bellmanford(graph, start):
 
     unseenNodes = graph
     # relax baby
-    for i in range(len(graph)-1):
+    for i in range(len(graph)-1:
         for u in unseenNodes:
             for v,w in graph[u].items():
                 if dist[u] + w < dist[v]:
