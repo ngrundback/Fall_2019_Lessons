@@ -23,22 +23,33 @@ Focuses:
 - Compression
 - Binary to Quantum
 
-### Week One: Selection Sort and Binary Search
+### Problem One: Selection Sort and Binary Search
 
 - Create kata or video for year one
-- Create flowchart of selection sort
+- Create flowchart of algorithms
+- Submit katas on repl.it for year one students
+
+### Problem Two: Merge Sort OR Quick Sort
+
+- Create kata **OR** video for year one
 - Submit katas on repl.it
+- Literature review presentations
 
-### Week Two: Merge Sort
+### Week One-Two: Collective Intelligence
+- IB Pseudocode Questions
+- Create Cybernetic Application
+- Problem One
 
-- Create kata or video for year one
-- Create flowchart of selection sort
-- Submit katas on repl.it
 
-### Week Three: Quick Sort
+### Week Three-Four: Quantum Vs. Binary
+- IB Pseudocode Questions
+- Create materials for year one on:
+  - How does a computer work
+  - How does a quantum computer work
+- Write first quantum computer program
+- Problem Two
 
-- Create kata or video for year one
-- Create flowchart of selection sort
-- Submit katas on repl.it
-
-### Week Four:
+### Week Five-Six: Folksonomies and Machine Learning
+- IB Pseudocode Questions
+- Supervised Learning vs. Unsupervised Learning
+- Machine Learning Project

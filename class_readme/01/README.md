@@ -99,7 +99,7 @@ Topics:
 
 - Submit code in repl.it
 
-### Week Six: Work Week
+### Week Six: Flex/Work Week
 - Prepare materials for all milestones to be submitted via GitHub
 
 - Conduct mock interview
