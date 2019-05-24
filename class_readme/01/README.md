@@ -1,4 +1,31 @@
-# Algorithms on Graphs
+# Algorithms and Data Structures
+## Overview
+In this unit you will meet the following milestones:
+- Finish the IA
+- Finish paper on "Applications of Graphs and Data Structures"
+- Literature review of research
+- Complete mock interview
+- Panel discussion on paper topic
+- Create OOP for:
+
+  - Queue
+  - Stack
+  - Linked List
+  - Binary Tree
+  - Node
+  - Graph
+
+
+- Create the following Programs:
+
+  - BFS
+  - DFS
+  - Dijkstra
+  - A star
+  - Bellman-Ford
+  - Preorder, postorder, and in-order traversal of a Tree
+  - Largest Island Problem
+  - Web-crawler
 
 ## Programming Rubric
 
@@ -34,7 +61,9 @@ Topics:
 
 - [Link To Video](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-13-breadth-first-search-bfs/)
 
-- Solve Largest Island Problem in repl.it
+- Mock Interview Question Prep- Solve Largest Island Problem in repl.it
+
+- Create OOP lesson on Linked Lists for year one
 
 ### Week Three: Applying Heuristics
 - Literature Review Presentation Due
@@ -49,25 +78,40 @@ Topics:
 
 ### Week Four: Negative Cycles
 
-- Create media to demonstrate how the web is represented as a graph.
-OR
-- Create a web-crawling program
+- Create media to demonstrate how the web is represented as a graph **And** Create a web-crawling program
 
--[Link to Pseudocode](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec17.pdf)
+- [Link to Pseudocode](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec17.pdf)
 
--[Link to Video](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-17-bellman-ford/)
+- [Link to Video](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-17-bellman-ford/)
 
 - Solve kata in repl.it
 
 ### Week Five: Binary Trees
-- Create Binary Tree Class
+- Create paper panels/ presentation
+
+- Create binary tree class
+
 - Create programs for the following:
   - preorder traversal
   - postorder traversal
   - in-order traversal
+
+
 - Submit code in repl.it
 
-### Week Six: Capstone
+### Week Six: Work Week
+- Prepare materials for all milestones to be submitted via GitHub
+
+- Conduct mock interview
+
+- Peer grade IA's
+
+- Panel presentation prep
+
+
+### Week Seven: Capstone
 - Turn in IA
-- Panel Presentations
-- Mock Program Interview
+
+- Panel presentations
+
+- Mock program interview
