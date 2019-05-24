@@ -1,4 +1,5 @@
 # Algorithms and Data Structures
+![pic2](https://i.kym-cdn.com/entries/icons/original/000/013/564/doge.jpg)
 ## Overview
 In this unit you will meet the following milestones:
 - Finish the IA
