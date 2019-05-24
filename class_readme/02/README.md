@@ -1,4 +1,4 @@
-# Sorting and Searching Algorithms
+# The Future
 
 ## Programming Rubric
 
