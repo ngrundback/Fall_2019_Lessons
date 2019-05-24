@@ -36,6 +36,10 @@ Focuses:
 - Submit katas on repl.it
 - Literature review presentations
 
+### Problem Three: Closest Points
+- Create kata **OR** video for year one
+- Submit katas on repl.it
+
 ### Week One-Two: Collective Intelligence
 - IB Pseudocode Questions
 - Create Cybernetic Application
