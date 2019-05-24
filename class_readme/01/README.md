@@ -1,3 +1,5 @@
+# Algorithms on Graphs
+
 ## Programming Rubric
 
 | Grade         | Descriptor                                |
@@ -22,7 +24,9 @@ Topics:
 
 - [Link To Video](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-13-breadth-first-search-bfs/)
 
-- Kata in repl.it
+- Create OOP of queue, stack, graph, and node
+
+- Use your new classes to solve the Katas in repl.it
 
 ### Week Two: Shortest Path
 
@@ -30,7 +34,7 @@ Topics:
 
 - [Link To Video](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-13-breadth-first-search-bfs/)
 
-- Solve Largest Island Problem in replit
+- Solve Largest Island Problem in repl.it
 
 ### Week Three: Applying Heuristics
 - Literature Review Presentation Due
@@ -45,6 +49,10 @@ Topics:
 
 ### Week Four: Negative Cycles
 
+- Create media to demonstrate how the web is represented as a graph.
+OR
+- Create a web-crawling program
+
 -[Link to Pseudocode](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec17.pdf)
 
 -[Link to Video](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-17-bellman-ford/)
@@ -58,3 +66,8 @@ Topics:
   - postorder traversal
   - in-order traversal
 - Submit code in repl.it
+
+### Week Six: Capstone
+- Turn in IA
+- Panel Presentations
+- Mock Program Interview

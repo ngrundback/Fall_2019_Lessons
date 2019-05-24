@@ -11,7 +11,13 @@ graph = {
 #     print('For Key', key)
 #     for edge_key, edge_value in graph[key].items():
 #         print(edge_key,":",edge_value)
-arr = list('sabcdt')
-for i in range(len(graph)-1):
-    key = arr[i]
-    print(graph[key])
+# arr = list('sabcdt')
+# for i in range(len(graph)-1):
+#     key = arr[i]
+#     print(graph[key])
+
+dist = {}
+for x in graph:
+    dist[x] = float('inf')
+dist['s'] = 0
+print(dist)
