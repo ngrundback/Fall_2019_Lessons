@@ -31,6 +31,17 @@ class Node():
         if self.right:
             self.right.print_tree()
 
+    def post_order(self):
+
+        if self.left:
+            self.left.post_order()
+
+        if self.right:
+            self.right.post_order()
+        print(self.data)
+
+
+
     def find(self,data):
         if data == self.data:
             return True
@@ -51,3 +62,13 @@ class Node():
         if self.right:
             self.right.make_array(arr)
         return arr
+
+tree = Node(5)
+tree.insert(2)
+tree.insert(3)
+tree.insert(7)
+tree.insert(6)
+tree.insert(8)
+tree.insert(1)
+
+tree.post_order()
