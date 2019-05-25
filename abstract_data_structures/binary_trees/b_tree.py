@@ -32,6 +32,7 @@ class Node():
             self.right.print_tree()
 
     def post_order(self):
+        #(left,right,root)
 
         if self.left:
             self.left.post_order()
@@ -40,7 +41,21 @@ class Node():
             self.right.post_order()
         print(self.data)
 
+    def pre_order(self):
+        # (root,left,right)
+        nodeStack = [self]
+        while nodeStack:
+            node = nodeStack.pop()
+            print(node.data)
 
+            if node.right is not None:
+                nodeStack.append(node.right)
+            if node.left is not None:
+                nodeStack.append(node.left)
+
+    def in_order(self):
+        #(left, root, right)
+        pass
 
     def find(self,data):
         if data == self.data:
@@ -63,12 +78,14 @@ class Node():
             self.right.make_array(arr)
         return arr
 
-tree = Node(5)
-tree.insert(2)
-tree.insert(3)
-tree.insert(7)
-tree.insert(6)
-tree.insert(8)
-tree.insert(1)
+tree = Node(10)
+tree.left(8)
+tree.right(2)
+tree.left.left(3)
+tree.left.right(5)
+tree.right.left(2)
 
+print('post_order')
 tree.post_order()
+print('pre_order')
+tree.pre_order()
