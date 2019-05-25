@@ -9,13 +9,13 @@ class Node():
         # if there is already data
         if self.data:
             # left side
-            if data < self.data:
+            if data <= self.data:
                 if self.left == None:
                     self.left = Node(data)
                 else:
                     self.left.insert(data)
             # right side
-            elif data > self.data:
+            elif data >= self.data:
                 if self.right == None:
                     self.right = Node(data)
                 else:
@@ -23,6 +23,18 @@ class Node():
         # if there is no data
         else:
             self.data = data
+
+    def add(self,data,pos):
+        if pos == "left":
+            if self.left:
+                self.left.add(data,pos)
+            else:
+                self.left = Node(data)
+        elif pos == "right":
+            if self.right:
+                self.right.add(data,pos)
+            else:
+                self.right = Node(data)
 
     def print_tree(self):
         if self.left:
@@ -55,7 +67,11 @@ class Node():
 
     def in_order(self):
         #(left, root, right)
-        pass
+        if self.left:
+            self.left.in_order()
+        print(self.data)
+        if self.right:
+            self.right.in_order()
 
     def find(self,data):
         if data == self.data:
@@ -78,14 +94,22 @@ class Node():
             self.right.make_array(arr)
         return arr
 
-tree = Node(10)
-tree.left(8)
-tree.right(2)
-tree.left.left(3)
-tree.left.right(5)
-tree.right.left(2)
+# tree = Node(1)
+# tree.left = Node(2)
+# tree.right = Node(3)
+# tree.left.left = Node(4)
+# tree.left.right = Node(5)
+
+tree = Node(1)
+tree.add(2,'left')
+tree.add(3, 'right')
+tree.left.add(4,'left')
+tree.left.add(5,'right')
+
 
 print('post_order')
 tree.post_order()
 print('pre_order')
 tree.pre_order()
+print('in_order')
+tree.in_order()

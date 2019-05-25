@@ -8,7 +8,7 @@
 | 00-60         | Working code with no comments             |
 | 70-79         | Pass all sample tests                     |  
 | 80-89         | Pass all sample tests and make flow chart |
-| 90-99         | Pass all tests and make flow chart        |    
+| 90-99         | Pass all tests and provide Pseudocode     |    
 
 
 ## Paper Two

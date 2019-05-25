@@ -19,7 +19,6 @@ root.left.left = b_tree.Node(3)
 root.left.right = b_tree.Node(5)
 root.right.left = b_tree.Node(2)
 
-# print('post_order')
-# tree.post_order()
+
 print('pre_order')
 pre_order(root)
