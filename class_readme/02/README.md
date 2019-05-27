@@ -53,12 +53,13 @@ Focuses:
   - How does a quantum computer work
 - Write first quantum computer program
 - Problem Two
-- ![intro](https://www.youtube.com/watch?v=pi7YwxxZQ5A)
-- ![Superposition](https://www.youtube.com/watch?v=p-MNSLsjjdo)
-- ![quantum theory](https://www.youtube.com/watch?v=7UwigY4SjKY)
+- [intro](https://www.youtube.com/watch?v=pi7YwxxZQ5A)
+- [Superposition](https://www.youtube.com/watch?v=p-MNSLsjjdo)
+- [quantum theory](https://www.youtube.com/watch?v=7UwigY4SjKY)
 
 ### Week Five-Six: Folksonomies and Machine Learning
 - IB Pseudocode Questions
 - Supervised Learning vs. Unsupervised Learning
 - Machine Learning Project
 - [Link to ML5](https://ml5js.org/)
+- [intro](https://www.youtube.com/watch?v=qv6UVOQ0F44)
