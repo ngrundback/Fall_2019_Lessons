@@ -11,6 +11,10 @@ class Node():
     def get_next(self):
         return self.pointer
 
+# create search function
+# create remove function
+# create doublely linked list
+
 class LinkedList():
 
     def __init__(self):
@@ -30,6 +34,7 @@ class LinkedList():
         while current_node:
             print(current_node.get_data())
             current_node = current_node.pointer
+
 
 head = Node(1)
 item1 = Node(2)
