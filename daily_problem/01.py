@@ -21,3 +21,13 @@ def same_num(arr,num):
 
 my_nums = [10,15,3,7]
 print(same_num(my_nums, 17))
+
+def linear_time(arr,num):
+    for x in arr:
+        num2 = num - x
+        if num2 in arr:
+            return True
+    return False
+
+my_nums = [10,15,3,7]
+print(linear_time(my_nums, 17))
