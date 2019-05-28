@@ -19,7 +19,6 @@ def same_num(arr,num):
             return True
     return False
 
-my_nums = [10,15,3,7]
 print(same_num(my_nums, 17))
 
 def linear_time(arr,num):
@@ -29,5 +28,14 @@ def linear_time(arr,num):
             return True
     return False
 
-my_nums = [10,15,3,7]
 print(linear_time(my_nums, 17))
+
+#O(n/2)
+def half_time(arr, num):
+    for x in range(len(arr)//2+1):
+        num2 = num - x
+        if num2 in arr:
+            return True
+    else:
+        return False
+print(half_time(my_nums, 17))
