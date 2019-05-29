@@ -27,7 +27,7 @@ def linear_time(arr,num):
     return False
 
 
-#O(n/2)
+# Have students find the error in logic here.
 def half_time(arr, num):
     new_list = range(len(arr)//2+1)
     for x in new_list:
