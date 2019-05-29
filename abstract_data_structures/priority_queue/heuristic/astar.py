@@ -21,7 +21,7 @@ def path_finder(matrix):
         current_weight, distance, x, y = minNode
         px, py = x,y
 
-        neighbors = ((x-1,y),(x,y-1),(x+1,y),(x,y+1))
+        neighbors = ((x-1,y),(x,y-1),(x+1,y),(x,y+1), (x-1,y-1), (x+1,y+1))
         real_neighbors = ((x,y) for (x,y) in neighbors if 0 <= x < length and 0<= y < len(matrix[0]))
 
         for cx,cy in real_neighbors:
@@ -33,7 +33,15 @@ def path_finder(matrix):
                 parent[(cx,cy)] = (px,py)
 
                 if (cx,cy) == goal:
-                    print('hey')
+                    print('hey, hey, hey')
+
+                    currentNode = (length-1,length-1)
+                    while currentNode != (0,0):
+                        x,y = currentNode
+                        matrix[x][y] = "X"
+                        currentNode = parent[(x,y)]
+                    matrix[0][0] = 'X'
+                    pprint.pprint(matrix)
                     return (visited[goal])
 
 
