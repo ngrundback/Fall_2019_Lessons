@@ -20,6 +20,14 @@ def find_missing2(arr):
             return arr[x] + 1
     return arr[-1] + 1
 
+def find_missing3(arr):
+    # remove dups
+    arr = set(arr)
+    i = 1
+    while i in arr:
+        i += 1
+    return i
+
 def merge_sort(arr):
     pass
 
@@ -41,11 +49,11 @@ def bubble_sort(arr):
 
 # Test Cases
 
-# arr = [3,4,-1,1]   #= 2
-# arr = [1,2,0]      #= 3
-# arr = [0,2,-1]     #= 1
+#arr = [3,4,-1,1]   #= 2
+#arr = [1,2,0]      #= 3
+#arr = [0,2,-1]     #= 1
 
 
 #print(find_missing(arr))
 #print(bubble_sort(arr))
-print(find_missing2(arr))
+print(find_missing3(arr))
