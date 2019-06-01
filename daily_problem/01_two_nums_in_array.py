@@ -18,6 +18,5 @@ def same_num(arr,num):
         if x in arr and y in arr:
             return True
     return False
-
 my_nums = [10,15,3,7]
 print(same_num(my_nums, 17))
