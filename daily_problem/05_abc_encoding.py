@@ -73,7 +73,7 @@ def count_me(s):
             cache[x] = cache[0] + 1
 
         else:
-            add_num = int( str(s[x-1]) + str(s[x-2]) )
+            add_num = int( str( s[x-1] ) + str( s[x-2] ))
             cache[x] = cache[x-1]
             if add_num <= 26:
                 cache[x] += cache[x-2]
