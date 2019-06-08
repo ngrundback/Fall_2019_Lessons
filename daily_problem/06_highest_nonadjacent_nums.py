@@ -1,13 +1,13 @@
 # given a list of intergers return the highest
 # nonadjacent sum
 import pprint
-nums = [2,4,6,5]
+nums = [2,4,5,6,3,2]
 
 # O(2n)
 def r_find_sum(arr):
     if not arr:
         return 0
-    return max(r_find_sum(arr[1:]),arr[0] + r_find_sum(arr[2:]) )
+    return max( r_find_sum(arr[1:]), arr[0] + r_find_sum(arr[2:]) )
 
 print(r_find_sum(nums))
 
