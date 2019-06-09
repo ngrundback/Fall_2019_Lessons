@@ -23,7 +23,7 @@ def iterative(num):
 
     for x in range(2, num):
         cache[x] = cache[x-1] + cache[x-2]
-    return cache
+    return cache[num-1]
 
 print(iterative(25))
 
@@ -36,3 +36,13 @@ def stair_counts(num):
     return cache[-1]
 
 print(stair_counts(25))
+
+def any_count(num,arr):
+
+    cache = [0 for _ in range(num+1)]
+    cache[0] = 1
+
+    for x in range(1, num+1):
+        cache[x] = sum(cache[x - int] for int in arr if x-int >= 0)
+    return cache[-1]
+print(any_count(4,[1,2]))
