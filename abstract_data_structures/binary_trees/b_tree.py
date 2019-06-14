@@ -87,6 +87,7 @@ class Node():
                 return self.right.find(data)
 
     def make_array(self, arr):
+        # inorder
         if self.left:
             self.left.make_array(arr)
         arr.append(self.data)
