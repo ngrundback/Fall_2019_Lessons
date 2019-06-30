@@ -8,3 +8,19 @@
 # Given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index, 2 in the second,
 # and 3 in the fourth index (we cannot hold 5 since it would run off to the left), so we can trap
 # 8 units of water.
+
+def over_flow(arr):
+  l_wall = arr[0]
+  r_wall = arr[-1]
+  wall = min(l_wall, r_wall)
+  total = 0
+  for x in range(len(arr)-1):
+    if arr[x] < wall:
+      total += wall - arr[x]
+    else:
+      wall = arr[x]
+  return total
+
+
+
+print(over_flow([3,0,1,3,0,5]))
