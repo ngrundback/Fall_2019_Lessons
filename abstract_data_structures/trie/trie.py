@@ -76,4 +76,5 @@ def prefix_trie_matching(text, trie):
             return False
 
 t = build_trie('meow mix')
+print(t)
 print(prefix_trie_matching('me',t))
