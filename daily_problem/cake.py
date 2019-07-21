@@ -1,12 +1,23 @@
-def cut_cake(cake):
+def cut_cake(cake, num):
     # turn into 2D array
     pie =  list(map(list, cake.splitlines()))
-    # row_l = (len(pie)//2)
-    # col_l = (len(pie[0])//2)
-    # top_half = pie[:row_l][:col_l]
-    #print(top_half)
-    top_left = pie[:2]
-    print(top_left)
+    rl = len(pie)
+    cl = len(pie[0])
+    rasin_cords = []
+    # check rows
+    for x in range(rl):
+        for y in range(cl):
+            if 'o' == pie[x][y]:
+                rasin_cords.append((x,y))
+
+
+
+    return rasin_cords
+
+    # find how many rasins
+    # backtracking
+        # is safe conditions
+        # loop :)
 
 cake = '''
 ........
@@ -15,4 +26,4 @@ cake = '''
 ........
 '''.strip()
 
-print(cut_cake(cake))
+print(cut_cake(cake,2))
