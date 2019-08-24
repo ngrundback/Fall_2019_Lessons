@@ -8,6 +8,7 @@ def get_perms(digits, mapping):
     
     for char in mapping[digit]:
         for perm in get_perms(digits[1:], mapping):
+            print(perm)
             result.append(char + perm)
     return result
     

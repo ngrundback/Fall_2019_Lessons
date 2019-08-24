@@ -30,12 +30,9 @@ def solve(arr):
 
 
 if __name__ == '__main__':
-  #arr = [1,2,3]
-  #arr2 = [random.randint(0,10) for x in range(10)]
-  #print(sum(arr2)//2)
-  #print(arr2)
-  #print(solve(arr2))
-  # arr = [1,2,3]
-  # meow = [ [x] + [arr[0]] for x in arr]
-  # print(meow)
-  #print(50 & 25)
+  arr = [1,2,3]
+  arr2 = [random.randint(0,10) for x in range(10)]
+  print(solve(arr2))
+  arr = [1,2,3]
+  meow = [ [x] + [arr[0]] for x in arr]
+  print('meow',meow)
