@@ -64,10 +64,6 @@ class PriorityQueue(Queue):
             self.items.append(data)
             return self.merge_sort(self.items)
     
-    def popI(self):
-        return self.items.pop(0)
-    
-    
 
 class Node():
     
