@@ -131,12 +131,10 @@ def astar(maze,pqueue,str,fin):
     str = maze[str[0]][str[1]]
     pqueue.add(str)
     paths = {}
-    visited = []
     
     while pqueue.items:
         node = pqueue.pop()
         x,y = node.x, node.y
-        visited.append((x,y))
         px,py = x,y
         for cx, cy in (x+1, y), (x-1, y), (x, y+1), (x, y-1):
             
@@ -145,8 +143,7 @@ def astar(maze,pqueue,str,fin):
                     paths[(cx,cy)] = (px,py)
                     print('hey, hey, hey')
                     return paths
-                
-                print(cx,cy)
+        
                 dist_m = abs(fin[0] - cx) + abs(fin[1]-cy)
                 maze[cx][cy].weight = dist_m
                 maze[cx][cy].parent = (px,py)
@@ -154,9 +151,7 @@ def astar(maze,pqueue,str,fin):
                 paths[(cx,cy)] = (px,py)
                 pqueue.add(maze[cx][cy])
                 
-            
-        
-    
+
     return 'Nope'
     
 
