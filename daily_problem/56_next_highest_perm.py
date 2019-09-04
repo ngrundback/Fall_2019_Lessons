@@ -25,18 +25,19 @@ def next_highest(arr):
     arr[smallest], arr[int-1] = arr[int-1], arr[smallest]
     
     # x is the final number
-    x = 0
-    for j in range(int):
-        x = x * 10 + arr[j]
-        
-    arr = sorted(arr[int:])
+    # x = 0
+    # for j in range(int):
+    #     x = x * 10 + arr[j]
+    # 
+    first_half = (arr[:int])
+    second_half = sorted(arr[int:])
     
-    for j in range(n-int):
-        x = x * 10 + arr[j]
+    # for j in range(n-int):
+    #     x = x * 10 + arr[j]
         
-    return x
+    return first_half + second_half
     
     
 if __name__ == '__main__':
-    arr = [1,2,3,4]
+    arr = [1,2,3,4,2,1]
     print(next_highest(arr))
