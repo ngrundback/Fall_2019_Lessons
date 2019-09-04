@@ -30,9 +30,10 @@ def longest(arr):
                 ans = temp_ans
     
     temp_ans = sorted_arr[start:up_to]
+    if temp_ans > ans:
+        return temp_ans
          
-    
-    return ans, temp_ans
+    return ans
         
 def merge_sort(arr):
     if len(arr) > 1:
@@ -68,7 +69,7 @@ def merge_sort(arr):
             
     
 if __name__ == '__main__':
-    arr = [12,3,13,5,4,14,2,0]
+    arr = [15,12,3,13,5,4,14,2,1]
     print(longest(arr))    
             
             
