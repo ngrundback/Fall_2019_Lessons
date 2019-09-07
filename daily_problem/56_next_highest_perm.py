@@ -6,6 +6,8 @@ def next_highest(arr):
     # and find first digit that is smaller than the int 
     # next to it
     n = len(arr)
+    
+    # move right
     for int in range(n-1,0,-1):
         if arr[int] > arr[int-1]:
             break 
@@ -13,7 +15,9 @@ def next_highest(arr):
     if int == 0:
         return 'Next number not possiable'
     
+    # we want the number that breaks the pattern
     x = arr[int-1]
+    # this is where we start the change
     smallest = int
     
     # find smallest digit on the right side of (int-1)
@@ -24,16 +28,10 @@ def next_highest(arr):
     # swap the above found smallest with (int-1)
     arr[smallest], arr[int-1] = arr[int-1], arr[smallest]
     
-    # x is the final number
-    # x = 0
-    # for j in range(int):
-    #     x = x * 10 + arr[j]
-    # 
+
     first_half = (arr[:int])
     second_half = sorted(arr[int:])
     
-    # for j in range(n-int):
-    #     x = x * 10 + arr[j]
         
     return first_half + second_half
     
