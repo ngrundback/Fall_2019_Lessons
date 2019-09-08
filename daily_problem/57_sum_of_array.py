@@ -3,10 +3,6 @@
 # Given a list of integers and a number K, return which contiguous elements of the list sum to K.
 # 
 # For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return [2, 3, 4], since 2 + 3 + 4 = 9.
-# 
-# We will be sending the solution tomorrow, along with tomorrow's question. As always, feel free to shoot us an email if there's anything we can help with.
-# 
-# Have a great day!
 
 def sum_of(arr,num):
   
@@ -22,3 +18,25 @@ def sum_of(arr,num):
         break
       elif target == num:
         return arr[x:y+1]
+        
+
+def l_sum_of(arr,num):
+    previous = dict()
+    sum = 0
+    previous[0] = -1
+    
+    for last_idx, item in enumerate(arr):
+        sum += item
+        # key = sum
+        # value = idx
+        previous[sum] = last_idx
+        print(previous)
+        # this will show where to start the first index
+        # as the key is = to the sum
+        
+        first_idx = previous.get(sum-num)
+        print(first_idx)
+        if first_idx is not None:
+            return arr[first_idx+ 1: last_idx+1]
+            
+print(l_sum_of([1,2,3,4,5],12))
