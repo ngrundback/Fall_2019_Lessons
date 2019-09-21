@@ -1,5 +1,6 @@
 # This problem was asked by Google.
-# 
+# https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm
+# https://en.wikipedia.org/wiki/Merkle_tree
 # Given two non-empty binary trees s and t, check whether tree t has exactly 
 # the same structure and node values with a subtree of s. A subtree of s is 
 # a tree consists of a node in s and all of this node's descendants. 
