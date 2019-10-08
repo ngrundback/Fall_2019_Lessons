@@ -30,9 +30,9 @@ def crotate(lst, m):
         # last item will be recorded twice
         for i in range(len(lst)-1):
             lst[i] = lst[i+1]
-            print(lst)
+            #print(lst)
         # So, the last element is switched to first element
-        lst[len(lst)-1] = first_element
+        lst[-1] = first_element
     return lst
 
 arr = [1, 2, 3, 4, 5, 6]
