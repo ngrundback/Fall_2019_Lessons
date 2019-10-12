@@ -1,62 +1,66 @@
-
-
-// User's location ########################################################################################################################
-var watchUser = navigator.geolocation.watchPosition(foundYou, findError);
-
-
-
-
-// Our function to pass to watchPosition when it finds user
-function foundYou(yourPosition){
-
-  // What is "yourPosition"? *hint* press CMD+Alt+J to look in the console...
-  console.log(yourPosition);
-
-  // Store user's location
-  if (yourPosition != null){
-    var userLat = yourPosition.coords.latitude;
-    var userLon = yourPosition.coords.longitude;
-    var userSpeed = yourPosition.coords.speed;
-
-    if (userSpeed == null){
-      userSpeed = "Too slow to care. Try harder"
-    }
-
-    // GPS INFO for HTML
-    const messageBoxLat = document.querySelector("#messageLat");
-      messageBoxLat.innerHTML = "Your Lat is: " + userLat
-    const messageBoxLon = document.querySelector("#messageLon");
-      messageBoxLon.innerHTML = "Your Lon is: " + userLon
-    const messageBoxSpeed = document.querySelector("#messageSpeed");
-      messageBoxSpeed.innerHTML = "Your Speed is: " + userSpeed
+// test permissions via browser
+function testDeviceOrientation() {
+  
+  // Not a function :(
+  if (typeof DeviceOrientationEvent != 'function') {
+    
+    return setResult('DeviceOrientationEvent NOT detected')
   }
-} // END foundYou
+  
+  // If permission is needed
+  if (typeof DeviceOrientationEvent.requestPermission == 'function'){
+    // function to alert user and gain permission
+    // user must click for api to work
+    document.getElementById("myBtn").addEventListener("click", onClick); 
 
-// A function that runs if the user location cannot be found
-function findError(error){
-  // If the site cannot find the user's location, display an error message
-  let messageBox = document.querySelector("#message");
-  messageBox.innerHTML = "Sorry; we can't currently locate you. Try reloading the page and allowing the GPS to find you :)" 
+    return setResult(' Permission Needed ')
+  }
+  
+  
+  if (typeof DeviceMotionEvent == 'function'){
+    // if no permission needed
+    window.addEventListener('devicemotion', deviceMotionHandler);
+    if (typeof DeviceOrientationEvent == 'function') {
+      return setResult('DeviceOrientationEvent detected, Device Motion detected, and NO permission needed')
+    }
+    return setResult("Device Motion Event detected but no Device Orientation. Try Permissions.")
+  }
+  
+  DeviceMotionEvent.requestPermission().then(function(result) {
+    document.getElementById("myBtn").addEventListener("click", onClick); 
+
+    return setResult(result);
+  });
+}
+
+// return results of browser based permissions 
+function setResult(result) {
+  document.getElementById('result').innerHTML = 'RESULT: ' + result;
+  setInterval(deviceMotionHandler, 900) 
+
+}
+
+// get user permission to allow device motion event api to work
+
+function get_permission() {
+  DeviceMotionEvent.requestPermission()
+  .then(response => {
+    if (response == 'granted') {
+      window.addEventListener('devicemotion', deviceMotionHandler);
+      setInterval(deviceMotionHandler, 900) 
+
+    }
+  })
+  .catch(console.error)
 }
 
 
-// End User Location #############################################################################################################################################
 
-//DeviceOrientationEvent.requestPermission() tutorial
-
-//Firefox Device Motion ########################################################################################################################
-
-if (window.DeviceMotionEvent) {
-  const messageBoxMotion = document.querySelector("#messageMotion")
-    messageBoxMotion.innerHTML = "Device Mounted. Are you on a PHONE!?.....¯\_(ツ)_/¯"
-  window.addEventListener('devicemotion', deviceMotionHandler);
-  setInterval(deviceMotionHandler, 900)
-} else {
-  const messageBoxMotion = document.querySelector("#messageMotion")
-    messageBoxMotion.innerHTML = "Not Supported. :("
-}
-
+// Track and show user's device info
 function deviceMotionHandler(yourMotion){
+  console.log('yoo')
+  console.log(window.orientation)
+  
   if (yourMotion != null){
     var x_accel = yourMotion.accelerationIncludingGravity.x
     var y_accel = yourMotion.accelerationIncludingGravity.y
@@ -80,10 +84,14 @@ function deviceMotionHandler(yourMotion){
       const accelZ = document.querySelector("#z")
         accelZ.innerHTML = "Your Z Axis is: " + z_accel.toFixed(1)
     } 
-    
-    const rotate_x = document.querySelector("#r_x")
+    if (r_xrate != null){
+      const rotate_x = document.querySelector("#r_x")
       rotate_x.innerHTML = "Your Rotate Rate is: " + r_xrate.toFixed(1)
-  } 
+    }
+    
+  } else{
+    console.log('oh jezz')
+  }
 }
-// End Firefox Device Motion ########################################################################################################################
+
 
