@@ -27,7 +27,7 @@ class NeuralNework():
     # loss function => sum of squares error
 
     def backprop(self):
-        # apply chain rule to find derivation  of the loss function pertaining to w1 and w2
+        # apply chain rule to find derivation of the loss function pertaining to w1 and w2
         d_weights2 = np.dot(self.layer1.T, (2*(self.y-self.output)* sigmoid_derivative(self.output)))
         d_weights1 = np.dot(self.input.T, (np.dot(2*(self.y-self.output)*sigmoid_derivative(self.output), self.weights2.T)* sigmoid_derivative(self.layer1)))
         self.weights1 += d_weights1
